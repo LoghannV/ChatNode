@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="box">
+        <div id="lateral">
+            <div id="user">
+                <div id="imagem">
+                    <img src="public_image/icon.png" alt="" width="50" height="50">
+                </div>
+                <div id="texto">
+                    <h1 class="myname"></h1>
+                    <select name="status" id="status">
+                        <option value="Disponivel">Disponivel</option>
+                        <option value="Ausente">Ausente</option>
+                        <option value="Ocupado">Ocupado</option>
+                        <option value="Offline">Offline</option>
+                      </select>
+                </div>
+            </div>
+            <ul id="listacontatos">
+                <li class="contato" UserId="0" UserName="Leandro">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Leandro</h1>
+                        <h2 style="color:greenyellow">Disponivel</h2>
+                    </div>
+                </li>
+                <li class="contato" UserId="1" UserName="Paula">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Paula</h1>
+                        <h2 style="color:greenyellow">Disponivel</h2>
+                    </div>
+                </li>
+                <li class="contato" UserId="2" UserName="Jose">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Jose</h1>
+                        <h2 style="color:yellow">Ausente</h2>
+                    </div>
+                </li>
+                <li class="contato" UserId="3" UserName="Lais">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Lais</h1>
+                        <h2 style="color:rgb(49, 49, 49)">Offline</h2>
+                    </div>
+                </li>
+                <li class="contato">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Josia</h1>
+                        <h2 style="color:yellow">Ausente</h2>
+                    </div>
+                </li>
+                <li class="contato">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Leandro P.</h1>
+                        <h2 style="color:yellow">Ausente</h2>
+                    </div>
+                </li>
+                <li class="contato">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Marta</h1>
+                        <h2 style="color:greenyellow">Disponivel</h2>
+                    </div>
+                </li>
+                <li class="contato">
+                    <div id="imagem">
+                        <img src="public_image/icon.png" alt="" width="50" height="50">
+                    </div>
+                    <div id="texto">
+                        <h1 class="sub">Cleide</h1>
+                        <h2 style="color:greenyellow">Disponivel</h2>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="chat">
+            <div id="topo">
+                <img src="public_image/icon.png" alt="" width="50" height="50">
+                <h2 class="nomeContato" UserId="">Leandro</h2>
+            </div>
+            <div id="corpo"></div>
+            <div id="mensagem">
+                <textarea idTo="0" name="msg" id="msg" rows="3"></textarea>
+                <button id="enviar_menssagem">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="base.js"></script>
+</html>
